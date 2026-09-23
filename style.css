@@ -1,0 +1,76 @@
+:root {
+  color-scheme: light;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans", sans-serif;
+  --ink: #0e1f33;
+  --secondary: #526680;
+  --teal: #008f7d;
+  --mint: #3de3cf;
+  --line: #d9e6ed;
+  color: var(--ink);
+  background: #f5f8fa;
+  line-height: 1.75;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; }
+a { color: #007565; text-underline-offset: .18em; }
+a:hover { color: #005b51; }
+a:focus-visible { outline: 3px solid var(--mint); outline-offset: 4px; border-radius: 3px; }
+.shell { width: min(100% - 48px, 980px); margin-inline: auto; }
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 510px;
+  padding: 26px 0 124px;
+  color: white;
+  background: linear-gradient(135deg, var(--ink) 0%, #173650 62%, #175c61 100%);
+}
+.hero::before, .hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  background: rgba(61, 227, 207, .10);
+}
+.hero::before { width: 310px; height: 310px; right: 5%; top: -110px; }
+.hero::after { width: 260px; height: 260px; left: -130px; bottom: -130px; }
+.hero .shell { position: relative; z-index: 1; }
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.brand { display: flex; align-items: center; gap: 12px; font-size: 1.16rem; font-weight: 750; letter-spacing: -.03em; }
+.brand img { width: 44px; height: 44px; border-radius: 11px; box-shadow: 0 4px 15px rgba(0,0,0,.1); }
+.language { display: flex; gap: 2px; border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: 4px; background: rgba(255,255,255,.08); }
+.language a { color: #ecf6f5; text-decoration: none; padding: 6px 15px; border-radius: 999px; font-size: .86rem; }
+.language a[aria-current="page"] { color: var(--ink); background: white; font-weight: 700; }
+.hero-copy { max-width: 740px; padding-top: 96px; }
+.eyebrow { margin: 0 0 18px; font-size: .78rem; letter-spacing: .22em; font-weight: 750; color: var(--mint); }
+h1 { margin: 0 0 26px; font-size: clamp(2.45rem, 6vw, 4.25rem); line-height: 1.18; letter-spacing: -.055em; }
+.lead { max-width: 680px; margin: 0; font-size: clamp(1.04rem, 2vw, 1.28rem); line-height: 1.85; color: #dcebf0; }
+.hero-date { margin: 24px 0 0; color: #bed2dc; font-size: .9rem; }
+main.shell { position: relative; z-index: 2; margin-top: -52px; padding-bottom: 76px; }
+.policy { padding: clamp(28px, 5vw, 56px); border: 1px solid var(--line); border-radius: 24px; background: white; box-shadow: 0 20px 56px rgba(14, 31, 51, .09); }
+h2 { display: flex; align-items: center; gap: 14px; margin: 0 0 18px; font-size: clamp(1.45rem, 2.5vw, 1.85rem); line-height: 1.4; letter-spacing: -.035em; }
+h2::before { content: ""; width: 4px; height: 1.35em; flex: none; border-radius: 3px; background: var(--teal); }
+h2:not(:first-child) { margin-top: 48px; padding-top: 42px; border-top: 1px solid var(--line); }
+p { margin: 0 0 15px; }
+p:last-child { margin-bottom: 0; }
+ul { padding-left: 1.35em; margin: 0; }
+li + li { margin-top: 14px; }
+.facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 28px 0 0; }
+.fact { min-height: 116px; padding: 18px; border-radius: 16px; background: #eaf8f5; }
+.fact strong, .fact span { display: block; }
+.fact strong { color: #006c60; font-size: .99rem; line-height: 1.5; }
+.fact span { margin-top: 7px; font-size: .86rem; line-height: 1.55; color: var(--secondary); }
+.date { color: var(--secondary); font-size: .9rem; }
+footer { border-top: 1px solid var(--line); padding: 26px 0 38px; color: var(--secondary); font-size: .86rem; }
+@media (max-width: 650px) {
+  .shell { width: min(100% - 32px, 980px); }
+  .hero { min-height: 0; padding-bottom: 108px; }
+  .hero-copy { padding-top: 74px; }
+  h1 { font-size: clamp(2rem, 8vw, 2.55rem); }
+  .brand { font-size: 1rem; }
+  .brand img { width: 38px; height: 38px; }
+  .language a { padding: 5px 10px; font-size: .78rem; }
+  .facts { grid-template-columns: 1fr; }
+  .fact { min-height: 0; }
+  h2:not(:first-child) { margin-top: 36px; padding-top: 34px; }
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How EdgeTapCopipe handles selected text, tap-detection data, and Firebase information.">
+  <title>Privacy Policy | EdgeTapCopipe</title>
+  <link rel="icon" href="./assets/app-icon.png">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="shell">
+      <div class="topbar">
+        <div class="brand"><img src="./assets/app-icon.png" alt="" width="44" height="44"><span>EdgeTapCopipe</span></div>
+        <nav class="language" aria-label="Language"><a href="./" lang="ja">日本語</a><a href="./en.html" lang="en" aria-current="page">English</a></nav>
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">PRIVACY POLICY</p>
+        <h1>Privacy Policy</h1>
+        <p class="lead">EdgeTapCopipe is a macOS app for saving and inserting text with an edge double tap. This page explains how it handles text and interaction data.</p>
+        <p class="hero-date">Last updated: September 23, 2026</p>
+      </div>
+    </div>
+  </header>
+  <main class="shell">
+    <article class="policy">
+      <h2>Our approach</h2>
+
+      <p>This policy applies to EdgeTapCopipe, a macOS app provided by p-kiba. The app has no code that sends saved text or history to the developer’s servers. It does include the Firebase SDK with Firebase Analytics.</p>
+      <div class="facts" aria-label="Privacy at a glance">
+        <div class="fact"><strong>No general clipboard access</strong><span>The app does not read or write the general system clipboard</span></div>
+        <div class="fact"><strong>Text stays on this Mac</strong><span>Saved text and history are kept in the app’s preferences</span></div>
+        <div class="fact"><strong>No account needed</strong><span>Registration and sign-in are not required</span></div>
+      </div>
+      <h2>Information processed and why</h2>
+      <ul>
+        <li>When you trigger an action, the app reads text selected in another app and saves it in its private text buffer. An insert action sends saved text to the target app. It does not read or write the general system clipboard. With compatible apps, macOS Services supplies a temporary transfer area for the requested action.</li>
+        <li>Saved text and up to 15 history entries remain in this Mac's app preferences (UserDefaults), including across app restarts. The app has no code that sends this text to the developer's servers.</li>
+        <li>The app temporarily processes accelerometer readings to detect taps. It observes that a key action occurred to prevent false triggers after typing, but does not read or store the characters typed. Release builds do not save training examples or false-trigger waveforms.</li>
+        <li>Sensitivity and behavior settings are stored in this Mac's app preferences. Accessibility permission is used to read selected text and insert text into the target app.</li>
+      </ul>
+      <h2>Firebase and third parties</h2>
+      <p>The app includes Google's Firebase SDK, including Firebase Analytics, and initializes Firebase at launch. The developer has not implemented custom analytics events. Depending on SDK settings, Firebase may send app launch and usage information, and device or app information, to Google. The app has no code that sends selected text, saved history, typed characters, or accelerometer waveforms to Firebase. See <a href="https://firebase.google.com/support/privacy">Google's Firebase privacy information</a>.</p>
+      <h2>Retention and deletion</h2>
+      <p>Saved text and history stay on this Mac until you delete them separately in the app. Older history entries are removed when the limit is reached. “Clear saved text” does not clear history; “Clear history” does not clear the current saved text. Preferences remain in the app's settings area. For questions about data that may have been stored by an external service, use the contact method below.</p>
+      <h2>Contact and updates</h2>
+      <p>For privacy questions or deletion requests, open a <a href="https://github.com/p-kiba/EdgeTapCopipe-Privacy-Policy-/issues/new">GitHub issue</a>. Issues are public: do not post saved text or personal information. If you need a private channel, request one without posting sensitive details.</p>
+      <p>We will update this page and its date if the app's features or data handling change.</p>
+    </article>
+  </main>
+  <footer><div class="shell">© 2026 p-kiba · EdgeTapCopipe</div></footer>
+</body>
+</html>
